@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-      <Nav/>
+      <Navpart/>
   </div>
 </template>
 
 <script>
-import Nav from './components/nav/nav'
+import Navpart from './components/nav/Navpart'
 
 export default {
   name: 'App',
   components: {
-      Nav
+      Navpart
   }
 }
 </script>

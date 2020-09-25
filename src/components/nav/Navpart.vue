@@ -1,27 +1,27 @@
 <template>
-    <div id="nav" class="navbar">
+    <div id="Navpart" class="navbar">
         <nav class="container-fluid navbar-default">
 <!--          头像-->
             <ul class="nav navbar-nav">
                 <li class="nav dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <a href="#" id="head">
                     <img style="margin-top: -0.6vh;" id="touxiang" class="img-circle" src="../../assets/touxiang.jpg" alt="">
+                    <ul id="dropdown_head" class="dropdown-menu">
+                      <li><a href="">hello1</a></li>
+                      <li><a href="">hello1</a></li>
+                      <li><a href="">hello1</a></li>
+                    </ul>
                   </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="">hello1</a></li>
-                    <li><a href="">hello1</a></li>
-                    <li><a href="">hello1</a></li>
-                  </ul>
                 </li>
             </ul>
           <div class="collapse navbar-collapse">
             <div class="navbar-header">
               <a href="" class="navbar-brand">首页</a>
             </div>
-            <ul class="nav navbar-nav">
-              <li><a href="">Link</a></li>
-              <li><a href="">Link</a></li>
-              <li><a href="">Link</a></li>
+            <ul class="nav navbar-nav" id="tabs">
+              <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
             </ul>
             <!--          右边登录注册-->
             <div style="margin-top: 1vh;" class='navbar-right'>
@@ -41,11 +41,21 @@
     </div>
 </template>
 
+
 <script>
 
-
 export default {
-  name: "nav"
+  name: "Navpart",
+  created() {
+  },
+  data(){
+    return{
+      show:false
+    }
+  },
+  methods:{
+
+  }
 }
 </script>
 
@@ -53,5 +63,15 @@ export default {
   #touxiang{
     width: 4vh;
     height: 4vh;
+  }
+  #dropdown_head{
+    display: none;
+  }
+  #head:hover #dropdown_head{
+    display:block;
+    list-style: none;
+  }
+  #dropdown_head li{
+    border-bottom: #0f0f0f;
   }
 </style>
