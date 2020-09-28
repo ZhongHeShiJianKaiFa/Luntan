@@ -1,17 +1,13 @@
 <template>
   <div id="app">
-      <Navpart/>
+      <router-view/>
   </div>
 </template>
 
 <script>
-import Navpart from './components/nav/Navpart'
 
 export default {
   name: 'App',
-  components: {
-      Navpart
-  }
 }
 </script>
 
